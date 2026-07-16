@@ -46,16 +46,17 @@ The away-game rates, by contrast, are far more compressed across all five teams 
 
 Before treating "hot arena" as a real category, it's worth checking it against something more concrete than reputation: actual attendance.
 
-| Team | Avg. attendance (2023-24) | Arena capacity | Fill rate |
+| Team | Avg. attendance | Arena capacity | Fill rate |
 |---|---|---|---|
-| Partizan | ~19,800–20,000 | 18,386 (Stark Arena) | ~98-99% |
-| Crvena Zvezda | ~18,900 | 18,386 (shared arena) | ~94-95% |
-| Zalgiris | ~14,900 | 15,415 | ~96-97% |
-| Panathinaikos | ~14,900 | 18,300 | growing, boosted by 2024 title |
-| Baskonia | not in top attendance figures found | 15,504 | ~70.5% (2023-24 season cited) |
-| *For comparison* | | | |
-| Fenerbahçe | ~10,100 | — | ~80% |
-| Anadolu Efes | ~12,100 | — | not specified |
+| Partizan | ~19,800–20,000 (2023-24) | 18,386 | ~98-99% |
+| Crvena Zvezda | ~18,900 (2023-24) | 18,386 | ~94-95% |
+| Zalgiris | ~14,900 (2023-24) | 15,415 | ~96-97% |
+| Panathinaikos | 14,914 (2023-24); *~17,500 estimated for 2024-25 based on a reported +17.8% increase* | 18,300 | ~81% (2023-24), *~96% estimated for 2024-25* |
+| Baskonia | not found in top-attendance sources | 15,504 | ~70.5% (cited directly for 2023-24) |
+| *Fenerbahçe* | ~10,100–10,785 | 13,059–13,500 | ~80% |
+| *Anadolu Efes* | ~12,079 | 16,000 | *~75.5% (calculated, not directly sourced)* |
+
+*Note: figures in italics are either estimated (derived from a reported percentage change rather than a direct source) or calculated (attendance ÷ capacity), not directly cited from a single source. All figures should be treated as directional/approximate rather than exact, and are drawn from slightly different seasons.*
 
 *Sources: EuroLeague official season recaps (2023-24, 2024-25) and independent fan-attendance research (RunRepeat, 2024); figures are approximate and drawn from different seasons, so treat as directional rather than exact.*
 
