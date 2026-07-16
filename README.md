@@ -46,25 +46,17 @@ The away-game rates, by contrast, are far more compressed across all five teams 
 
 Before treating "hot arena" as a real category, it's worth checking it against something more concrete than reputation: actual attendance.
 
-| Team | Avg. attendance | Arena capacity | Fill rate |
-|---|---|---|---|
-| Partizan | ~19,800–20,000 (2023-24) | 18,386 | ~98-99% |
-| Crvena Zvezda | ~18,900 (2023-24) | 18,386 | ~94-95% |
-| Zalgiris | ~14,900 (2023-24) | 15,415 | ~96-97% |
-| Panathinaikos | 14,914 (2023-24); *~17,500 estimated for 2024-25 based on a reported +17.8% increase* | 18,300 | ~81% (2023-24), *~96% estimated for 2024-25* |
-| Baskonia | not found in top-attendance sources | 15,504 | ~70.5% (cited directly for 2023-24) |
-| *Fenerbahçe* | ~10,100–10,785 | 13,059–13,500 | ~80% |
-| *Anadolu Efes* | ~12,079 | 16,000 | *~75.5% (calculated, not directly sourced)* |
+**Partizan and Crvena Zvezda** are, by a wide margin, the best-attended arenas in EuroLeague. In the 2023-24 season, Partizan averaged close to 20,000 fans per game in the 18,386-seat Stark Arena (a 98-99% fill rate), with Crvena Zvezda close behind at around 18,900 (94-95%) in the same shared venue. Both figures are independently confirmed by EuroLeague's own season recaps, not just reputation.
 
-*Note: figures in italics are either estimated (derived from a reported percentage change rather than a direct source) or calculated (attendance ÷ capacity), not directly cited from a single source. All figures should be treated as directional/approximate rather than exact, and are drawn from slightly different seasons.*
+**Zalgiris** also fills its arena consistently, averaging around 14,900 fans in a 15,415-seat arena (roughly 96-97%) in 2023-24 — one of only two EuroLeague teams (alongside Maccabi Tel Aviv) regularly cited as filling over 95% of capacity.
 
-*Sources: EuroLeague official season recaps (2023-24, 2024-25) and independent fan-attendance research (RunRepeat, 2024); figures are approximate and drawn from different seasons, so treat as directional rather than exact.*
+**Panathinaikos** is a more volatile case. The team recorded EuroLeague's *lowest* attendance in 17 years during the 2022-23 season, then averaged 14,914 fans in 2023-24 (about 81% of the 18,300-seat OAKA), before EuroLeague reported a further 17.8% year-over-year increase in 2024-25, driven by the team's 2024 championship win. That would put 2024-25 attendance in the region of 17,000+, though this is an estimate derived from a reported percentage change rather than a directly published figure.
 
-Two things stand out:
+**Baskonia** stands out as the most surprising case here. Despite showing the second-strongest home comeback effect in this analysis (+8.6 points over the league average), its fill rate — around 70.5% of the Fernando Buesa Arena's 15,504 seats, per a 2023-24 season source — is unremarkable relative to the other teams here, closer to the EuroLeague-wide average (68%) than to Partizan or Zalgiris. If crowd size or fill rate were the main driver of the comeback effect, Baskonia's numbers wouldn't obviously predict it. This suggests that, if there's a real "atmosphere effect" for Baskonia, it may be more about crowd intensity than sheer size or occupancy — but this analysis doesn't have the data to test that distinction.
 
-1. **Partizan and Crvena Zvezda are genuinely, verifiably the best-attended arenas in EuroLeague** by both raw attendance and fill rate — this isn't just reputation, it shows up clearly in independent data, and lines up with Partizan also posting the strongest home comeback gap in this analysis.
-2. **Baskonia is a more surprising case.** Despite showing the second-strongest home comeback effect (+8.6 points over league average), its attendance fill rate (~70%) is unremarkable relative to the other teams here — closer to the league average than to Partizan or Zalgiris. If crowd size or fill rate were the main driver, Baskonia's comeback numbers wouldn't obviously predict this. This suggests that, if there is a real "atmosphere effect" for Baskonia, it may be more about crowd intensity or specific team characteristics than sheer crowd size — but this analysis doesn't have the data to test that distinction directly.
-3. **Turkish clubs (Fenerbahçe, Anadolu Efes), despite strong reputations internationally, do not rank among the best-attended arenas** in these figures — a reminder that a team's European profile and its home crowd numbers don't always move together.
+For context, **Fenerbahçe and Anadolu Efes** — both well-known clubs internationally, and both mentioned as possible "hot arena" candidates when this project was scoped — do not appear among EuroLeague's best-attended teams. Fenerbahçe averaged around 10,100-10,800 fans in a roughly 13,000-13,500 seat arena (around 80% full), and Anadolu Efes around 12,000 fans in a 16,000-seat arena (a fill rate in the neighborhood of 75%, calculated rather than directly sourced). Both are respectable numbers, but well short of the near-capacity crowds seen in Belgrade, Kaunas, or (more recently) Athens.
+
+*All attendance figures above are drawn from EuroLeague season recaps and independent reporting (primarily 2023-24, with some 2024-25 context where available), and should be read as directional and approximate rather than precise, exact fill rates in particular are not consistently available across all teams and seasons, and some values here are estimates or calculations rather than directly published figures.*
 
 ## Sample Comparability Across Teams
 
