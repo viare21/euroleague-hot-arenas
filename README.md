@@ -36,7 +36,7 @@ Partizan and Crvena Zvezda are, independently of this analysis, EuroLeague's bes
 
 - **Correlational, not causal**: a higher home comeback rate could reflect crowd energy, team quality, coaching, or other factors this analysis can't separate.
 - **Uneven sample sizes**: Partizan (11 EuroLeague seasons in this dataset) and Crvena Zvezda (12) have shorter histories than Panathinaikos, Baskonia, and Zalgiris (19 each), both due to real competition-eligibility gaps (years spent in EuroCup instead), not missing data. Partizan's standout number rests on the smallest sample here (28 home games).
-- **No formal significance testing was run for these five teams.** A related analysis on Baskonia alone found its home/away gap did not reach conventional statistical significance (p > 0.1, both z-test and Fisher's exact test) despite a similar effect size — the same caution likely applies here, especially for smaller samples like Partizan and Crvena Zvezda.
+- **No formal significance testing was run for these five teams.** A related analysis on Baskonia alone found its home/away gap did not reach conventional statistical significance (p > 0.1, both z-test and Fisher's exact test) despite a similar effect size - the same caution likely applies here, especially for smaller samples like Partizan and Crvena Zvezda.
 - The "hot arena" list itself was chosen by reputation, not a systematic, independent metric.
 
 ## Takeaways
