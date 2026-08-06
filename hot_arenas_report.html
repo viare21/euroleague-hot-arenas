@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Arenas, Big Deficits: Does Crowd Intensity Predict Comebacks?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F5D9;
+    --bg-card: #FBFCEE;
+    --border: #D6DFA8;
+    --text: #16233F;
+    --text-muted: #5B6650;
+    --green: #3E8E4F;
+    --coral: #C6564F;
+    --gold: #B8860B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 46px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 58ch;
+  }
+
+  /* ---------- SCOREBOARD ---------- */
+
+  .scoreboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 0 0;
+  }
+
+  .stat {
+    background: var(--bg-card);
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: clamp(22px, 4vw, 30px);
+    color: var(--green);
+  }
+
+  .stat-label {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- SECTIONS ---------- */
+
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--text);
+  }
+
+  h2 .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--text); }
+
+  em { color: var(--coral); font-style: italic; }
+
+  a { color: var(--green); text-decoration: none; border-bottom: 1px solid rgba(62,142,79,0.35); }
+  a:hover { border-bottom-color: var(--green); }
+
+  ul { padding-left: 20px; margin-bottom: 16px; color: var(--text); }
+  li { margin-bottom: 10px; }
+  li::marker { color: var(--gold); }
+
+  /* ---------- TABLE ---------- */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14.5px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  td.num { font-family: 'IBM Plex Mono', monospace; }
+
+  tr.pos td.num { color: var(--green); }
+  tr.neg td.num { color: var(--coral); }
+
+  /* ---------- IMAGES ---------- */
+
+  figure { margin: 28px 0; }
+
+  figure img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: block;
+    box-shadow: 0 8px 24px rgba(22,35,63,0.12);
+  }
+
+  figcaption {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* ---------- CALLOUT ---------- */
+
+  .callout {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  .callout strong { color: var(--gold); }
+
+  .note {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding: 48px 0 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--bg-card);
+  }
+
+  .btn.primary {
+    background: var(--green);
+    color: #FBFCEE;
+    border: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 560px) {
+    .scoreboard { grid-template-columns: 1fr; }
+    .hero { padding: 64px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">5 Teams · Play-by-Play Data · All Seasons</div>
+    <h1>Hot arenas, big deficits: does crowd intensity predict comebacks?</h1>
+    <p class="subtitle">An extension of a Baskonia-focused analysis to five EuroLeague teams known for intense home crowds (Baskonia, Zalgiris, Panathinaikos, Partizan, and Crvena Zvezda), testing whether that reputation shows up in the data.</p>
+
+    <div class="scoreboard">
+      <div class="stat">
+        <div class="stat-value">46.4%</div>
+        <div class="stat-label">Partizan home comeback rate (15+ pt deficit)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">3/5</div>
+        <div class="stat-label">teams show a strong home comeback effect</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">-11.9</div>
+        <div class="stat-label">Zalgiris home rate vs league average (points)</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="tag">01</span> Method</h2>
+    <p>For each team, in each game, the analysis finds the single worst point deficit faced at any moment, not just at a fixed point like the start of the 4th quarter, but across the entire game. Only games where that deficit reached <strong>15 points or worse</strong> are kept, to make sure the comparison is about genuine trouble, not routine fluctuation.</p>
+    <p>From that low point onward, a game counts as a "comeback" if the team tied the score or took the lead at any point before the final buzzer, not necessarily won. This is a deliberate choice: an earlier version of this analysis (on Baskonia alone) tried defining a comeback as "won after trailing by 10+ at the start of the 4th quarter," but that produced samples too small to say anything reliable, as few as 1-2 qualifying wins per team per venue. Tracking whether a team fought back into contention, rather than whether it ultimately won, produces a large enough sample to compare meaningfully across five teams and nearly two decades of games.</p>
+    <p>Comeback rate is then compared: home vs away for each team, and each team vs the EuroLeague-wide average.</p>
+  </section>
+
+  <section>
+    <h2><span class="tag">02</span> Results</h2>
+
+    <figure>
+      <img src="images/hot_arenas_comeback_rate.png" alt="Comeback rate: hot arena teams vs EuroLeague average">
+      <figcaption>Comeback rate after a 15+ point deficit, five "hot arena" teams vs EuroLeague average</figcaption>
+    </figure>
+
+    <table>
+      <thead>
+        <tr><th>Team</th><th>Home rate</th><th>Away rate</th><th>Home vs league avg (22.2%)</th></tr>
+      </thead>
+      <tbody>
+        <tr class="pos"><td>Partizan</td><td class="num">46.4%</td><td class="num">10.6%</td><td class="num">+24.2</td></tr>
+        <tr class="pos"><td>Panathinaikos</td><td class="num">31.1%</td><td class="num">14.0%</td><td class="num">+8.9</td></tr>
+        <tr class="pos"><td>Baskonia</td><td class="num">30.8%</td><td class="num">14.3%</td><td class="num">+8.6</td></tr>
+        <tr class="neg"><td>Crvena Zvezda</td><td class="num">18.4%</td><td class="num">14.3%</td><td class="num">-3.8</td></tr>
+        <tr class="neg"><td>Zalgiris</td><td class="num">10.3%</td><td class="num">12.2%</td><td class="num">-11.9</td></tr>
+      </tbody>
+    </table>
+
+    <p>The home effect, where it exists, is large. Partizan's home comeback rate is more than <strong>four times</strong> its own away rate (46.4% vs 10.6%), and more than <strong>double</strong> the EuroLeague average (22.2%). Panathinaikos and Baskonia both come back from big deficits at home roughly <strong>twice as often</strong> as they do on the road, and clearly above the league average too. This isn't a marginal gap, it's the difference between "sometimes recovers" and "rarely recovers." By contrast, the away-game numbers across all five teams are tightly bunched between 10.6% and 14.3%, close to the 11.4% league average, suggesting whatever is driving the home numbers is specific to playing at home, not a general trait of these particular teams.</p>
+
+    <p>Not every team fits the pattern, though. <strong>Crvena Zvezda sits below the league average at home</strong>, and <strong>Zalgiris is the clearest outlier</strong>: its home comeback rate (10.3%) is actually <em>lower</em> than its own away rate (12.2%), the opposite of what the "loud home crowd" hypothesis predicts, and a contrast with Zalgiris's own clear home advantage in effort-based box score stats (rebounds, blocks) found in a separate analysis.</p>
+  </section>
+
+  <section>
+    <h2><span class="tag">03</span> Checking the "hot arena" premise against attendance</h2>
+    <p>Partizan and Crvena Zvezda are, independently of this analysis, EuroLeague's best-attended teams (around 19-20K and 19K per game, both near 95-99% arena capacity). Their reputation is well-supported by real numbers, not just anecdote. Zalgiris also runs near capacity (around 97%), despite showing the opposite comeback pattern.</p>
+    <p><strong>Baskonia is the more interesting outlier</strong>: despite the second-strongest home comeback effect, its fill rate (around 70%) is close to the EuroLeague average, not exceptional, suggesting the effect, if real, isn't simply about crowd size. For context, Fenerbahce and Anadolu Efes, often assumed to have similarly loud arenas, don't rank among EuroLeague's best-attended teams, running at roughly 75-80% capacity.</p>
+    <p class="note">Attendance figures are approximate, mostly from the 2023-24 season, sourced from EuroLeague recaps and independent reporting.</p>
+  </section>
+
+  <section>
+    <h2><span class="tag">04</span> Limitations</h2>
+    <ul>
+      <li><strong>Correlational, not causal:</strong> a higher home comeback rate could reflect crowd energy, team quality, coaching, or other factors this analysis can't separate.</li>
+      <li><strong>Uneven sample sizes:</strong> Partizan (11 EuroLeague seasons in this dataset) and Crvena Zvezda (12) have shorter histories than Panathinaikos, Baskonia, and Zalgiris (19 each), both due to real competition-eligibility gaps (years spent in EuroCup instead), not missing data. Partizan's standout number rests on the smallest sample here (28 home games).</li>
+      <li><strong>No formal significance testing was run for these five teams.</strong> A related analysis on Baskonia alone found its home/away gap did not reach conventional statistical significance (p &gt; 0.1, both z-test and Fisher's exact test) despite a similar effect size. The same caution likely applies here, especially for smaller samples like Partizan and Crvena Zvezda.</li>
+      <li>The "hot arena" list itself was chosen by reputation, not a systematic, independent metric.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="tag">05</span> Takeaways</h2>
+    <ul>
+      <li>Where the home effect shows up, it's large, not a marginal statistical nudge, but a doubling (or more) of comeback rate compared to both away games and the league average.</li>
+      <li>The premise only partly holds across teams: 3 of 5 reputationally "loud" teams show this strong home advantage, 2 don't.</li>
+      <li>Partizan and Crvena Zvezda's reputations are backed by genuinely exceptional attendance. Baskonia's strong effect is not obviously explained by crowd size or fill rate.</li>
+      <li>Zalgiris shows the opposite pattern from what's expected, despite a clear home advantage in other "effort" stats. Different home-advantage metrics don't always agree.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a class="btn primary" href="https://github.com/viare21/euroleague-hot-arenas" target="_blank">View code on GitHub</a>
+    <a class="btn" href="https://federicoviarengo.com/" target="_blank">Back to portfolio</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
